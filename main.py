@@ -19,7 +19,8 @@ def blog(blog_id):
     for any_post in all_posts:
         if any_post.post_id == blog_id:  # Correct comparison
             requested_post = any_post    # Assign the matching post
-        return render_template("post.html", post=requested_post)
+            break
+    return render_template("post.html", post=requested_post)
 
 if __name__ == "__main__":
     app.run(debug=True)
